@@ -1,0 +1,173 @@
+.navbar {
+    margin: 10px;
+    padding: 0.5rem;
+}
+
+
+#header{
+    text-align: center;
+    margin-top: 70px;
+    color: black;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: yellow; /* Define a cor de fundo para amarelo */
+    overflow-x: hidden;
+  }
+
+  .top_nav {
+    background-color: transparent !important;
+    transition: opacity 0.5s; /* Define a cor de fundo da barra de navegação como amarelo com !important */
+  }
+
+  .top_nav .navbar {
+    background-color: transparent!important; /* Define a cor de fundo da barra de navegação como amarelo com !important */
+  }
+  .top_nav.visible {
+    opacity: 1;
+  }
+  
+  .top_nav.invisible {
+    opacity: 0;
+    pointer-events: none; /* Impede que a barra de navegação seja clicável quando invisível */
+  }
+
+  .cont1 {
+    background-color: yellow; /* Define a cor de fundo para amarelo */
+    padding: 50px; /* Adiciona um espaçamento interno para melhorar o layout */
+  }
+
+.fluid-img_text {
+    display: flex;
+    align-items: center; /* Alinha itens verticalmente no centro */
+}
+
+.img-fluid {
+    flex-shrink: 0; /* Evita que a imagem encolha mais do que seu tamanho original */
+    margin-right: 10px; /* Espaçamento entre a imagem e o texto */
+    max-width: 100%;
+    width: 45%;
+    height: auto;
+}
+
+p {
+    margin: 0; /* Remove a margem padrão para melhor aparência */
+}
+
+/* Media query para telas menores */
+@media (max-width: 768px) {
+    .fluid-img_text {
+        flex-direction: column; /* Empilha os itens verticalmente em telas menores */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .img-fluid {
+        margin-right: 0; /* Remove o espaçamento entre a imagem e o texto em telas menores */
+    }
+}
+
+.img_wrp {
+    background-color: #12B045;
+    padding: 20px;
+    text-align: center;
+    height: 650px;
+    display: flex;
+    align-items: center;
+}
+
+.img_wrp img {
+    margin-top: -170px;
+    max-width: 100%;
+    width: 45%;
+    margin-right: 20px;
+}
+
+.session_2 h1 {
+    margin-top: -110px;
+}
+
+.session_2 p {
+    margin-top: 40px;
+}
+
+.session_2 {
+    flex: 1;
+}
+@media (max-width: 927px) {
+    .session_2 h1 {
+        margin-top: 0; /* Remova a margem superior para a resolução 769x646 */
+        margin-bottom: 20px; /* Adicione uma margem inferior para separar do parágrafo */
+    }
+}
+
+@media (max-width: 768px) {
+    .img_wrp {
+        flex-direction: column;
+    }
+
+    .img_wrp img {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .session_2 h1 {
+        margin-top: 0;
+    }
+
+    .session_2 p {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .img_wrp {
+        height: auto;
+    }
+
+    .img_wrp img {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+/*remover bordas do icone do offcanvas no modo responsivo, com !important para ser tratado com prioriodade*/
+.navbar-toggler {
+    border: none !important; /* Remova a borda do botão do menu recolhível */
+}
+
+.navbar-toggler:focus , .btn-close:focus{
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.nav-link{
+    color:#666777;
+    font-weight: 500;
+    position: relative;
+}
+
+.nav-link:hover, .nav-link.active{
+    color: #0488D2
+}
+
+@media (min-width: 991px) {
+    .nav-link::before{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: #0488D2;
+        visibility: hidden;
+        transition: 0.3s ease-in-out;
+    }
+
+    .nav-link:hover::before{
+        width: 100%;
+        visibility: visible;
+    }
+}

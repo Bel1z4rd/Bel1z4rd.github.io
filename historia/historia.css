@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: yellow !important;
+}
+
+.header {
+    text-align: center;
+    margin-top: 30px;
+    color: darkgreen;
+    background-color: yellow;
+}
+
+#h1_head {
+    margin-bottom: 20px;
+}
+
+.p_texts {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 40px;
+    text-align: justify;
+    color: #666777;
+}
+
+
+#carouselContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: yellow;
+    margin-top: 60px;
+}
+
+#carouselExampleAutoplaying {
+    max-width: 500px; /* Definindo a largura máxima do carousel */
+}
